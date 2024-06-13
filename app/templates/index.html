@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="{{url_for("static", filename = "css/styles.css")}}">
+</head>
+<body>
+  <div class="container">
+  
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="flash flash-{{category}}" id="flash">
+                    <span>{{message}}</span>
+                    <span class="btn-close btn-close-{{category}}" id="close">X</span>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <div class="form-container">
+      <h1>Welcome back!</h1>
+      <form action="/validar-login" method="post">
+        <div class="form-group">
+          <label for="usuario">Usuario</label>
+          <input type="text" name="usuario" class="text-input">
+        </div>
+        <div class="form-group">
+          <label for="pass">Password</label>
+          <input type="password" name="pass" class="text-input" id="pass">
+        </div>
+        <div class="form-group">
+          <label for="check">Ver pass</label>
+          <input type="checkbox" name="check" id="check" class="check-input">
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Login" class="btn">
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="{{url_for("static", filename = "js/main.js")}}"></script>
+</body>
+</html>

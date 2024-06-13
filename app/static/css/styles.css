@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-image: url('../img/fondo-pagina4.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+}
+
+.form-container {
+  width: 450px;
+  background-color: rgba(0, 0, 0, 0.216);
+  backdrop-filter: blur(50px);
+  border: 1px solid rgba(255, 255, 255, 0.209);
+  border-radius: 5px;
+  padding: 30px 25px;
+  box-sizing: border-box;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.form-container h1 {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.886);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  color: rgba(255, 255, 255, 0.823);
+}
+
+.text-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.269);
+  background-color: rgba(0, 0, 0, 0.315);
+  backdrop-filter: blur(7px);
+  color: rgba(255, 255, 255, 0.622);
+  border-radius: 5px;
+  outline: none;
+  padding-left: 13px;
+  box-sizing: border-box;
+}
+
+.check-input {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(0, 0, 0, 0.229);
+  backdrop-filter: blur(7px);
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.237);
+  cursor: pointer;
+}
+
+.check-input:checked {
+  background-color: rgb(12, 73, 153);
+}
+
+.check-input:checked::before {
+  content: "\2713";
+  display: block;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  line-height: 15px;
+  font-size: 12px;
+  color: white; 
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.252);
+  border-radius: 5px;
+  outline: none;
+  background-color: rgba(0, 76, 255, 0);
+  backdrop-filter: blur(7px);
+  color: rgba(255, 255, 255, 0.817);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.flash {
+  width: 65%;
+  height: 40px;
+  color: white;
+  border-radius: 5px;
+  padding: 15px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flash-success {
+  background-color: rgb(40, 151, 42);
+}
+
+.flash-error {
+  background-color: rgb(151, 40, 40);
+}
+
+.btn-close {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-close-success {
+  color: rgb(13, 82, 21);
+}
+
+.btn-close-error {
+  color: rgb(82, 13, 13);
+}
